@@ -1,0 +1,135 @@
+// Section styles
+
+.illustration-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-column-gap: $grid-gap-large;
+        grid-row-gap: $grid-gap-large;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta {
+            margin-top: 2rem;
+        }
+
+        figure {
+            padding-right: 4rem;
+        }
+
+        form {
+            margin: 0;
+
+            h2 {
+                &:after {
+                    content: ".";
+                    color: $brandprimary;
+                }
+            }
+
+            .cta {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        
+        .container {
+            grid-template-columns: auto;
+
+            figure {
+                padding-right: 0;
+                text-align: center;
+                img {
+                    max-width: 22rem;
+                }
+            }
+        }
+    }
+}
+
+.alternate-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: $offblack;
+    color: $offwhite;
+
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    a {
+        color: $offwhite;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+article {
+    max-width: 50rem;
+}
+
+.button-panel {
+    margin: 3rem 0;
+    background: $lightgrey;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-row-gap: 1.25rem;
+    }
+    
+    span {
+        color: $brandprimary;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 1.5rem 0;
+    }
+}
+
+.section-divider {
+    margin: 3rem 0;
+    height: 24rem;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 768px) {
+        margin: 1.5rem 0;
+        background-attachment: scroll;
+    }
+}
+
+.post-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+
+    p:first-of-type {
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}

@@ -1,0 +1,160 @@
+// Typographic styles
+
+$serif: "Source Serif Pro", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+body {
+    font-family: $sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: $serif;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+h1, .h1 {
+    font-size: $xxlarge;
+
+    &:after {
+        content: ".";
+        color: $brandprimary;
+    }
+}
+
+h2, .h2 {
+    font-size: $xlarge;
+}
+
+h3, .h3 {
+    font-size: $large;
+}
+
+h4, .h4 {
+    font-size: $medium;
+}
+
+h5, .h5 {
+    font-size: $base;
+}
+
+h6, .h6 {
+    font-size: $small;
+    color: $grey;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    margin: 1rem 0;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+    margin-top: 2.5rem;
+}
+
+a {
+    color: $offblack;
+    text-decoration-skip-ink: auto;
+    transition: .25s;
+
+    &:hover {
+        text-decoration-color: $brandprimary;
+    }
+}
+
+small, .small {
+    font-size: $small;
+    line-height: 1.4;
+}
+
+.cta {
+    padding: 0.75rem 4.5rem 0.75rem 2rem;
+    position: relative;
+    display: inline-block;
+    color: $offblack;
+    text-decoration: none;
+    line-height: 1.618;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid $brandprimary;
+    font-weight: 700;
+    font-family: $serif;
+    background: transparent;
+    font-size: $base;
+
+    &:after {
+        content: "";
+        display: block;
+        background-image: url("/img/graphics/arrow-icon.svg");
+        height: 1.5rem;
+        width: 1.5rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 2rem;
+        top: calc(50% - 0.45rem);
+        transition: .25s;
+    }
+
+    &:hover {
+        &:after {
+            transform: translateX(0.5rem);
+        }
+    }
+}
+
+a,
+button,
+input,
+textarea {
+    &:focus, &:active {
+        outline: 2px dotted rgba($brandprimary, 0.5);
+        outline-offset: 2px;
+    }
+}
+
+::selection {
+    background: rgba($brandprimary, 0.2);
+}
+
+ul:not([class]) {
+    list-style-type: none;
+
+    li {
+        line-height: 1.3;
+        
+        &:before {
+            content: "\2022";
+            color: $brandprimary;
+            display: inline-block;
+            width: 1.5rem;
+            margin-left: -2.5rem;
+            font-size: 2.5rem;
+            vertical-align: middle;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{{ define "main" }}
+<header class="header">
+    <div class="container">
+        <h1>{{ .Page.Title }}</h1>
+        <p>{{ .Params.Subtitle }}</p>
+    </div>
+</header>
+<main id="main">
+    <section class="service-intro alternate-section">
+        <div class="container">
+            <div>
+                {{ .Content }}
+            </div>
+            <figure>
+                <img src="{{ .Site.BaseURL }}img/graphics/abstract-illustration-3.svg" alt="" aria-hidden="true" focusable="false">
+            </figure>
+        </div>
+    </section>
+
+    <section class="post-grid current-vacancies">
+        <div class="container">
+            <h2>Current vacancies</h2>
+            <ul class="content-blocks">
+                {{ range .Pages }}
+                <li>
+                    <div style="background-image: url('{{ .Site.BaseURL }}{{ .Params.featured_image }}');">
+                        <a href="{{.Permalink}}" aria-label="Read more"></a>
+                    </div>
+                    <div>
+                        <h3><a href="{{.Permalink}}">{{ .Title }}</a></h3>
+                        <p class="h6">{{ .PublishDate.Format "2 January 2006" }}</p>
+                        <p>{{ .Summary }}&hellip;</p>
+                        <p><a href="{{.Permalink}}" class="cta">Read more</a></p>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-divider" aria-hidden="true" style="background-image: url('{{ .Site.BaseURL }}{{ .Params.Office_Photo }}')"></section>
+
+    <section class="illustration-section">
+        <div class="container">
+            <figure>
+                <img src="{{ .Site.BaseURL }}img/graphics/abstract-illustration-4.svg" alt="" aria-hidden="true" focusable="false">
+            </figure>
+            <article>
+                <h2 class="h1">We&rsquo;re always on the lookout for great people</h3>
+                <p>Don&rsquo;t see a role here for you, but still interested in working with us? Send us your CV anyway. We&rsquo;re always on the lookout for people who share our vision.</p>
+                <a href="{{ .Site.BaseURL }}contact-us" class="cta">Get in touch</a>
+            </article>
+        </div>
+    </section>
+</main>
+{{ end }}

@@ -1,0 +1,259 @@
+// Navigation styles
+
+.skip-link {
+    margin: 0 auto;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    width: 22rem;
+    opacity: 1;
+    background: $offwhite;
+  
+    &:not(:focus):not(:hover) {
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+}
+
+.site-nav {
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    z-index: 2;
+    background: rgba($offwhite, 0.9);
+
+    .nav-bar {
+        padding: 0 $medium;
+        height: 3.75rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 1rem;
+        align-items: center;
+        grid-template-areas: 
+        "logo nav";
+
+        .home-link {
+            grid-area: logo;
+            border-bottom: none;
+
+            svg {
+                vertical-align: middle;
+                max-width: 8rem;
+                height: auto;
+            }
+        }
+
+        nav {
+            grid-area: nav;
+            justify-self: end;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+    
+                li:not(.button-link) {
+                    display: inline-block;
+                    font-size: $xsmall;
+                    font-weight: 500;
+                    padding: 1rem 0.5rem;
+    
+                    a {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 3px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $brandprimary;
+                            visibility: hidden;
+                            transition: all 0.35s ease-in-out;
+                        }
+
+                        &:hover {
+                            &:before {
+                                visibility: visible;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &:first-of-type {
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+
+                    &:last-of-type {
+                        a {
+                            padding-right: 0;
+                        }
+                    }
+                }
+
+                .button-link {
+                    display: inline-block;
+                    font-size: $xsmall;
+                    font-weight: 500;
+                    padding: 1rem 0.5rem;
+
+                    a {
+                        border: 3px solid $offblack;
+                        text-decoration: none;
+                        padding: 0.5rem 0.75rem;
+                        transition: all 0.35s ease-in-out;
+
+                        &:hover {
+                            border-color: $brandprimary;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            grid-area: hamburger;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: none;
+            justify-self: end;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px 0;
+            margin: 0;
+
+            span {
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                background-color: $brandprimary;
+                display: block;
+                transform-origin: center;
+                transition: 0.31s ease-in-out;
+
+                &:first-of-type {
+                    top: 0.5rem;
+                }
+
+                &:nth-of-type(2) {
+                    top: 1.25rem;
+                }
+
+                &:last-of-type {
+                    top: 2rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0.5rem 0;
+        height: 3.75rem;
+        transition: all 0.31s ease-in-out;
+        overflow: hidden;
+
+        .nav-bar {
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "logo hamburger"
+            "nav nav";
+    
+            button {
+                display: block;
+            }
+
+            nav {
+                margin-top: 2rem;
+                width: 100%;
+
+                ul {
+                    position: relative;
+                    text-align: center;
+
+                    li:not(.button-link) {
+                        position: relative;
+                        display: block;
+                        margin: 0;
+    
+                        a {
+                            display: block;
+                            font-size: $base;
+                            
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                    .button-link {
+                        a {
+                            font-size: $base;
+                            padding: 0;
+                            border: none;
+                        }
+                    }
+
+                    li a {
+                        visibility: hidden; // For keyboard tabbing
+                        transition: visibility linear 1s;
+                    }
+                }
+            }
+        }
+
+        &.nav-open {
+            height: 100%;
+
+            .nav-bar {
+                button {
+                    span {
+                        &:first-of-type {
+                            top: 1.375rem;
+                            transform: rotate(45deg);
+                        }
+    
+                        &:nth-of-type(2) {
+                            opacity: 0;
+                        }
+            
+                        &:last-of-type {
+                            top: 1.375rem;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                nav ul li a {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+body.home nav ul li:first-of-type a,
+body.insights nav ul li:nth-of-type(2) a,
+body.contact nav ul li:nth-of-type(3) a {
+    &:before {
+        visibility: visible !important;
+        width: 100% !important;
+    }
+}
+
+body.careers .nav-bar nav ul li.button-link a {
+    border: 3px solid $brandprimary;
+
+    @media screen and (max-width: 768px) {
+        border: none;
+    }
+}

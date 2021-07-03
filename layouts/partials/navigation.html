@@ -1,0 +1,31 @@
+<a href="#main" class="skip-link cta">Skip to main content</a>
+<div class="site-nav" role="banner">
+	<div class="nav-bar">
+		<div class="logo">
+			<a class="home-link" href="{{ .Site.BaseURL }}" aria-label="Back to home page.">
+				{{ partial "logo" . }}
+			</a>
+		</div>
+		<button type="button" id="toggleNav" aria-label="Menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+		<nav>
+			<ul class="main-nav">
+				<li>
+					<a href="{{ .Site.BaseURL }}">How We Help Our Clients</a>
+				</li>
+				<li>
+					<a href="{{ .Site.BaseURL }}our-insights">Our Insights</a>
+				</li>
+				<li>
+					<a href="{{ .Site.BaseURL }}contact-us">Contact Us</a>
+				</li>
+				<li class="button-link">
+					<a href="{{ .Site.BaseURL }}careers">Careers</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<header class="header">
+    <div class="container">
+        <h1>{{ .Page.Title }}</h1>
+        <p class="document-date">Posted {{ .PublishDate.Format "2 January 2006" }}</p>
+    </div>
+</header>
+<main id="main">
+    <section class="container">
+        <img src="{{ .Site.BaseURL }}{{ .Params.featured_image }}" alt="{{ .Params.featured_image_alt }}">
+    </section>
+
+    <div class="container">
+        <article class="post-content">
+            {{ .Content }}
+        </article>
+    </div>
+
+    <section class="button-panel">
+        <div class="container">
+            <h2 class="h3">Like the sound of this<span>?</span></h2>
+            <p>
+                <a href="{{ .Site.BaseURL }}contact-us" class="cta">Get in touch</a>
+            </p>
+        </div>
+    </section>
+</main>
+{{ end }}

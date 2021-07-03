@@ -1,0 +1,78 @@
+// Base styles
+
+$black: #000000;
+$offblack: #333333;
+$grey: #757575;
+$lightgrey: #F7F7F7;
+$offwhite: #FDFDFD;
+$white: #FFFFFF;
+$brandprimary: #F33F33;
+
+$xxlarge: 4rem;
+$xlarge: 3rem;
+$large: 2.5rem; 
+$medium: 1.75rem;
+$base: 1.5rem; 
+$small: 1.125rem; 
+$xsmall: 1rem; 
+$xxsmall: 0.875rem;
+$xxxsmall: 0.8rem;
+
+$grid-gap-large: 3rem;
+$grid-gap-small: 2rem;
+
+html {
+    font-size: 16.18px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    position: relative;
+    background-color: $offwhite;
+    color: $offblack;
+    font-size: $base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.618;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    text-rendering: optimizeSpeed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 $medium;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden { 
+    position: absolute;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+img {
+    width: 100%;
+}

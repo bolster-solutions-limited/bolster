@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-gb">
+   	<head>
+      	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+		<title>{{if .IsHome}}{{ .Site.Title }}{{else}}{{ .Page.Title }} | {{ .Site.Title }}{{end}}</title>
+		{{ with .Site.Params.description }}
+		<meta name="description" content="{{ . }}">
+		{{ end }}
+		<!-- Open Graph data for Facebook -->
+		<meta content="article" property="og:type">
+		<meta content="Bolster | Digital Consultancy" property="og:site_name">
+		<meta content="Bolster - Digital Consultancy" property="og:title">
+		<meta content="We’re a digital consulting firm. We help organisations optimize and automate operations.' property='og:description">
+		<meta content="https://www.bolstersolutions.co.uk/" property="og:url">
+		<meta content="{{ .Site.BaseURL }}img/graphics/bolster-og.jpg" property="og:image">
+		<!-- Twitter Card data -->
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="Bolster - Digital Consultancy" name="twitter:title">
+		<meta content="We’re a digital consulting firm. We help organisations optimize and automate operations." name="twitter:description">
+		<meta content="{{ .Site.BaseURL }}img/graphics/bolster-og.jpg" name="twitter:image">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"> 
+		{{ $style := resources.Get "css/site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+		<link rel="stylesheet" href="{{ $style.Permalink }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon-16x16.png">
+		<link rel="manifest" href="{{ .Site.BaseURL }}site.webmanifest">
+		<link rel="mask-icon" href="{{ .Site.BaseURL }}safari-pinned-tab.svg" color="#f33f33">
+		<meta name="apple-mobile-web-app-title" content="Bolster">
+		<meta name="application-name" content="Bolster">
+		<meta name="msapplication-TileColor" content="#f33f33">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+			*, *:before, *:after {
+				-webkit-box-sizing: border-box; 
+				-moz-box-sizing: border-box; 
+				box-sizing: border-box;
+			}
+
+			.preloader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 99;
+				padding: 20px;
+				background: #FDFDFD;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				opacity: 1;
+				pointer-events: none;
+				transition: opacity 0.31s ease-in-out;
+				overflow-x: hidden;
+			}
+
+			.preloader img {
+				display: block;
+				margin: 0 auto;
+				max-width: 75px;
+				width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body class="{{ .Params.body_class }}">
+		{{ partial "pre-loader" . }}
+        {{ partial "navigation" . }}
+		{{ block "main" . }}{{ end }}
+		{{ partial "footer" . }}
+		<script async src="{{ .Site.BaseURL }}js/site.js"></script>
+	</body>
+</html>

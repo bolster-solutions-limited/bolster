@@ -1,0 +1,15 @@
+{{ define "main" }}
+<header class="header">
+    <div class="container">
+        <h1>{{ .Page.Title }}</h1>
+        <p class="document-date">Last updated {{ .Params.Update_Date }}</p>
+    </div>
+</header>
+<main id="main">
+    <div class="container">
+        <article>
+            {{ .Content }}
+        </article>
+    </div>
+</main>
+{{ end }}

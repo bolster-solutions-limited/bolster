@@ -1,0 +1,59 @@
+// Form styles
+
+.contact-form {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: $grid-gap-small;
+
+    div {
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        p.validation-error {
+            font-size: $xsmall;
+            margin-top: 0.5rem;
+            color: $brandprimary;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        grid-row-gap: 1.5rem;
+    }
+}
+
+label {
+    font-weight: 700;
+    font-family: $serif;
+    font-size: $base;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    background: rgba($grey, 0.1);
+    border: none;
+    border-radius: 0.25rem;
+    font-size: $base;
+    font-family: $sans-serif;
+    font-weight: 400;
+
+    &.validation-error {
+        background: rgba($brandprimary, 0.1);
+    }
+}

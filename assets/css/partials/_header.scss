@@ -1,0 +1,63 @@
+// Header styles
+
+.header {
+    .container {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    
+        p { 
+            line-height: 1.4;
+            font-weight: 600;
+            font-family: $serif;
+            font-size: $large;
+            max-width: 70%;
+
+            &.document-date {
+                font-size: $base;
+                color: $grey;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            padding-top: 5rem;
+            padding-bottom: 1.5rem;
+
+            p {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .container {
+            p {
+                font-size: $medium;
+            }
+        }
+    }
+}
+
+.home-header {
+    background: $lightgrey;
+    background-image: url('/img/graphics/home-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+    min-height: 600px;
+    background-position: center;
+
+    .container {
+        padding-top: 7rem;
+    }
+
+    h1, p {
+        color: $offwhite;
+    }
+
+    @media screen and (max-width: 576px) {
+        min-height: 400px;
+    }
+}

@@ -1,3 +1,14 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://bolster-develop.netlify.app/"
+languageCode = "en-gb"
+title = "Bolster | Digital Consultancy"
+disableHugoGeneratorInject = true
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+summaryLength = 10
+
+[params]
+    description = "We’re a digital consulting firm. We help optimize and automate operations."
+    
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.80

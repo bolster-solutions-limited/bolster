@@ -1,0 +1,46 @@
+{{ define "main" }}
+<header class="header">
+    <div class="container">
+        <h1>{{ .Page.Title }}</h1>
+        <p class="document-date">Posted {{ .PublishDate.Format "2 January 2006" }}</p>
+    </div>
+</header>
+<main id="main">
+    <section class="container">
+        <img src="{{ .Site.BaseURL }}{{ .Params.featured_image }}" alt="{{ .Params.featured_image_alt }}">
+    </section>
+
+    <div class="container">
+        <article class="post-content">
+            {{ .Content }}
+        </article>
+    </div>
+
+    <section class="illustration-section">
+        <div class="container">
+            <figure>
+                <img src="{{ .Site.BaseURL }}img/graphics/abstract-illustration-4.svg" alt="" aria-hidden="true" focusable="false">
+            </figure>
+            <form class="contact-form">
+                <h2>Apply for this job</h2>
+                <div>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" />
+                </div>
+                <div>
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" class="validation-error" />
+                    <p class="validation-error">Please fill out this field</p>
+                </div>
+                <div>
+                    <label for="message">Your message</label>
+                    <textarea rows="6" id="message"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="cta">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+{{ end }}
