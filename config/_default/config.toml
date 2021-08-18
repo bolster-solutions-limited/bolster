@@ -1,4 +1,4 @@
-baseURL = "https://bolster-prod-brochure.netlify.app/"
+baseURL = "https://bolster-prod-brochure.netlify.app"
 languageCode = "en-gb"
 title = "Bolster | Digital Consultancy"
 disableHugoGeneratorInject = true
