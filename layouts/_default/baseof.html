@@ -7,6 +7,9 @@
 		{{ with .Site.Params.description }}
 		<meta name="description" content="{{ . }}">
 		{{ end }}
+
+		{{ template "_internal/google_analytics.html" . }}
+
 		<!-- Open Graph data for Facebook -->
 		<meta content="article" property="og:type">
 		<meta content="Bolster | Digital Consultancy" property="og:site_name">
