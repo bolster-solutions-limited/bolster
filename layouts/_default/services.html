@@ -12,7 +12,7 @@
                 {{ .Content }}
             </div>
             <figure>
-                <img src="{{ .Site.BaseURL }}img/graphics/{{ .Params.Service_Illustration }}" alt="" aria-hidden="true" focusable="false">
+                <img src="{{ .Site.BaseURL }}/img/graphics/{{ .Params.Service_Illustration }}" alt="" aria-hidden="true" focusable="false">
             </figure>
         </div>
     </section>
@@ -24,7 +24,7 @@
             </div>
             <div>
                 {{ .Params.service_details_right | safeHTML }}
-                <p><a href="{{ .Site.BaseURL }}contact-us" class="cta">Get in touch</a></p>
+                <p><a href="{{ .Site.BaseURL }}/contact-us" class="cta">Get in touch</a></p>
             </div>
         </div>
     </section>
@@ -32,13 +32,13 @@
     <section class="illustration-section">
         <div class="container">
             <figure>
-                <img src="{{ .Site.BaseURL }}img/graphics/abstract-illustration-1.svg" alt="" aria-hidden="true" focusable="false">
+                <img src="{{ .Site.BaseURL }}/img/graphics/abstract-illustration-1.svg" alt="" aria-hidden="true" focusable="false">
             </figure>
             <article>
                 <h2 class="h6">Related Impact Story</h2>
-                <h3 class="h1"><a href="{{ .Site.BaseURL }}{{ .Params.Impact_Story_Slug }}">{{ .Params.Impact_Story_Title }}</a></h3>
+                <h3 class="h1"><a href="{{ .Site.BaseURL }}/{{ .Params.Impact_Story_Slug }}">{{ .Params.Impact_Story_Title }}</a></h3>
                 <p>{{ .Params.Impact_Story_Excerpt }}</p>
-                <a href="{{ .Site.BaseURL }}{{ .Params.Impact_Story_Slug }}" class="cta">Read more</a>
+                <a href="{{ .Site.BaseURL }}/{{ .Params.Impact_Story_Slug }}" class="cta">Read more</a>
             </article>
         </div>
     </section>

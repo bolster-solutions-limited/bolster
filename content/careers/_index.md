@@ -4,7 +4,7 @@ subtitle: Lorem ipsum dolor sit amet.
 url: careers
 layout: careers
 body_class: careers
-office_photo: img/photos/office-placeholder.jpg
+office_photo: /img/photos/office-placeholder.jpg
 ---
 
 ## We’re a vibrant team of people who want to help
