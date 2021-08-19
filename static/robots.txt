@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://www.bolstersolutions.co.uk/sitemap.xml
