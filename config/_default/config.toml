@@ -2,7 +2,7 @@ baseURL = "https://bolster-prod-brochure.netlify.app"
 languageCode = "en-gb"
 title = "Bolster | Digital Consultancy"
 disableHugoGeneratorInject = true
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
 summaryLength = 10
 
 [params]
