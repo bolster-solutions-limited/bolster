@@ -7,7 +7,16 @@
 </header>
 <main id="main">
     <section class="container">
-        <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" action="/thanks">
+        <form
+            name="contact"
+            method="POST"
+            action="/thanks"
+            id="contactForm"
+            class="contact-form"
+            netlify-honeypot="potOfHoney"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+        >
             <div>
                 <label for="name">Your name</label>
                 <input type="text" id="name" name="name" required />
@@ -20,6 +29,11 @@
                 <label for="message">Your message</label>
                 <textarea rows="6" id="message" name="message" required></textarea>
             </div>
+            <div style="display: none;">
+                <label for="potOfHoney">Don’t fill this out if you’re human</label>
+                <input type="text" id="potOfHoney" name="potOfHoney" ></textarea>
+            </div>
+            <div data-netlify-recaptcha="true"></div>
             <div>
                 <button type="submit" class="cta">Send</button>
             </div>
