@@ -24,13 +24,13 @@
                 {{ range first 3 .Pages }}
                 <li>
                     <div style="background-image: url('{{ .Site.BaseURL }}{{ .Params.featured_image }}');">
-                        <a href="{{.Permalink}}" aria-label="Read more"></a>
+                        <a href="{{ .Permalink }}" aria-label="Read more"></a>
                     </div>
                     <div>
-                        <h2 class="h3"><a href="{{.Permalink}}">{{ .Title }}</a></h2>
+                        <h2 class="h3"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <p class="h6">{{ .PublishDate.Format "2 January 2006" }}</p>
                         <p>{{ .Summary }}&hellip;</p>
-                        <p><a href="{{.Permalink}}" class="cta">Read more</a></p>
+                        <p><a href="{{ .Permalink }}" class="cta">Read more</a></p>
                     </div>
                 </li>
                 {{ end }}

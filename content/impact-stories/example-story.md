@@ -1,12 +1,13 @@
-+++
-date = 2021-06-05T23:01:00Z
-featured_image = "/img/photos/placeholder.jpg"
-featured_image_alt= "Alt text here"
-layout = "impact-story"
-title = "Four myths about building a software business"
-url = "example-story"
+---
+date: 2021-06-05T23:01:00Z
+featured_image: "img/photos/placeholder.jpg"
+featured_image_alt: "Alt text here"
+layout: "impact-story"
+title: "Four myths about building a software business"
+url: "example-story"
+draft: true
+---
 
-+++
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie ipsum sed condimentum consequat.
 
 Cras quis semper nulla, vel mattis dui. Suspendisse consequat posuere hendrerit. Suspendisse quis risus et justo gravida molestie. Nunc non nisi velit. Nulla sodales id orci ac aliquet. Nullam nulla dolor, gravida ac consequat quis, pellentesque sit amet tellus. Ut lacinia, libero et commodo facilisis, sapien turpis vulputate erat, at suscipit dui massa ut ante. Donec interdum placerat nibh, a fringilla lectus ultricies at. Vivamus at sem consequat velit aliquam ornare. Fusce sit amet pretium mauris, id posuere mauris. Praesent ac quam in nibh interdum blandit nec quis nunc. Mauris justo nulla, dignissim sit amet sem sit amet, volutpat pharetra dui. Integer felis lectus, tincidunt at dui id, condimentum gravida leo. Mauris lorem ipsum, suscipit id nisl vitae, accumsan gravida erat.

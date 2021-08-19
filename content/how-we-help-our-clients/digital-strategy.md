@@ -18,7 +18,8 @@ service_details_right:  "<ul>
                         <p>Sed eget molestie augue. Pellentesque vitae nibh maximus, tincidunt metus vel, rhoncus diam.</p>"
 impact_story_title: Four myths about building a software business
 impact_story_excerpt: As non-technology companies turn to software-based business models for growth, they will need to avoid common misconceptions.
-impact_story_slug: example-story   
+impact_story_slug: example-story
+draft: true
 ---
 
 ## Introduction to the service

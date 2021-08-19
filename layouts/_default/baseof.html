@@ -16,22 +16,22 @@
 		<meta content="Bolster - Digital Consultancy" property="og:title">
 		<meta content="We’re a digital consulting firm. We help organisations optimize and automate operations.' property='og:description">
 		<meta content="https://www.bolstersolutions.co.uk/" property="og:url">
-		<meta content="{{ .Site.BaseURL }}/img/graphics/bolster-og.jpg" property="og:image">
+		<meta content="{{ "/img/graphics/bolster-og.jpg" }}" property="og:image">
 		<!-- Twitter Card data -->
 		<meta content="summary_large_image" name="twitter:card">
 		<meta content="Bolster - Digital Consultancy" name="twitter:title">
 		<meta content="We’re a digital consulting firm. We help organisations optimize and automate operations." name="twitter:description">
-		<meta content="{{ .Site.BaseURL }}/img/graphics/bolster-og.jpg" name="twitter:image">
+		<meta content="{{ "/img/graphics/bolster-og.jpg" }}" name="twitter:image">
 
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"> 
 		{{ $style := resources.Get "css/site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 		<link rel="stylesheet" href="{{ $style.Permalink }}">
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/favicon-16x16.png">
-		<link rel="manifest" href="{{ .Site.BaseURL }}/site.webmanifest">
-		<link rel="mask-icon" href="{{ .Site.BaseURL }}/safari-pinned-tab.svg" color="#f33f33">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" }}">
+		<link rel="manifest" href="{{ "/site.webmanifest" }}">
+		<link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" }}" color="#f33f33">
 		<meta name="apple-mobile-web-app-title" content="Bolster">
 		<meta name="application-name" content="Bolster">
 		<meta name="msapplication-TileColor" content="#f33f33">
@@ -75,6 +75,6 @@
         {{ partial "navigation" . }}
 		{{ block "main" . }}{{ end }}
 		{{ partial "footer" . }}
-		<script async src="{{ .Site.BaseURL }}/js/site.js"></script>
+		<script async src="{{ "/js/site.js" }}"></script>
 	</body>
 </html>
