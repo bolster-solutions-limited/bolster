@@ -7,20 +7,33 @@
 </header>
 <main id="main">
     <section class="container">
-        <form class="contact-form">
+        <form
+            name="contact"
+            method="POST"
+            action="/thanks"
+            id="contactForm"
+            class="contact-form"
+            netlify-honeypot="potOfHoney"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+        >
             <div>
                 <label for="name">Your name</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" name="name" required />
             </div>
             <div>
                 <label for="email">Your email</label>
-                <input type="email" id="email" class="validation-error" />
-                <p class="validation-error">Please fill out this field</p>
+                <input type="email" id="email" name="email" required />
             </div>
             <div>
                 <label for="message">Your message</label>
-                <textarea rows="6" id="message"></textarea>
+                <textarea rows="6" id="message" name="message" required></textarea>
             </div>
+            <div style="display: none;">
+                <label for="potOfHoney">Don’t fill this out if you’re human</label>
+                <input type="text" id="potOfHoney" name="potOfHoney" ></textarea>
+            </div>
+            <div data-netlify-recaptcha="true"></div>
             <div>
                 <button type="submit" class="cta">Send</button>
             </div>
