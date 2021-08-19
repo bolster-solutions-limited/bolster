@@ -1,6 +1,6 @@
 ---
 title: Analytics & Artificial Intelligence
-subtitle: Lorem ipsum dolor sit amet.
+subtitle: Optimise your business processes
 url: analytics-artificial-intelligence
 layout: services
 service_illustration: abstract-illustration-2.svg

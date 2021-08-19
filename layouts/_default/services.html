@@ -1,12 +1,12 @@
 {{ define "main" }}
 <header class="header">
     <div class="container">
-        <h1>{{ .Page.Title }}</h1>
         <p>{{ .Params.Subtitle }}</p>
+        <h1>{{ .Page.Title }}</h1>
     </div>
 </header>
 <main id="main">
-    <section class="service-intro alternate-section">
+    <section class="service-intro">
         <div class="container">
             <div>
                 {{ .Content }}
@@ -17,7 +17,7 @@
         </div>
     </section>
 
-    <section class="service-details">
+    <section class="service-details alternate-section">
         <div class="container">
             <div>
                 {{ .Params.service_details_left | safeHTML }}
@@ -29,7 +29,7 @@
         </div>
     </section>
 
-    <section class="illustration-section">
+    <!-- <section class="illustration-section">
         <div class="container">
             <figure>
                 <img src="{{ .Site.BaseURL }}/img/graphics/abstract-illustration-1.svg" alt="" aria-hidden="true" focusable="false">
@@ -41,7 +41,7 @@
                 <a href="{{ .Site.BaseURL }}/{{ .Params.Impact_Story_Slug }}" class="cta">Read more</a>
             </article>
         </div>
-    </section>
+    </section> -->
 
     {{ partial "services-grid" . }}
 </main>
